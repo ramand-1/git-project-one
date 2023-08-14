@@ -1,0 +1,49 @@
+body{
+    margin: 0px;
+    font-size: 16px;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(12);
+    grid-template-rows: 100px 500px 100px;
+    grid-template-areas: 
+    'h h h h h h h h h h h h'
+    'a a c c c c c c c c c c'
+    'f f f f f f f f f f f f'
+    ;
+    text-align:center;
+}
+.container header , aside , article , footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4em;
+}
+header{
+    grid-area: h;
+    background-color: blue;
+}
+aside{
+    grid-area: a;
+    background-color: blueviolet;
+}
+article{
+    grid-area: c;
+    background-color: brown;
+}
+footer{
+    grid-area: f;
+    background-color: burlywood;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+footer > div{
+    max-width: 300px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    flex: 1;
+}
